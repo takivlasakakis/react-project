@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn format
+  /usr/local/bin/node /usr/local/bin/yarn lint
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
@@ -17,7 +17,8 @@ npm manifest:
   {
     "scripts": {
       "api": "node ratingsAPI.js"
-      "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\""
+      "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+      "lint": "eslint **/*.{js,jsx} --quiet"
     },
     "dependencies": {
       "axios": "0.16.1",
